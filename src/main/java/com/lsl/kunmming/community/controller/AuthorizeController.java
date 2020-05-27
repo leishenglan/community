@@ -54,6 +54,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githupUser.getId()));
             user.setGmtCreate(sdf.format(new Date()));
             user.setGmtModified(user.getGmtCreate());
+            user.setAvatarUrl(githupUser.getAvatarUrl());
             userMapper.insert(user);
             response.addCookie(new Cookie("token", token));
             //登录成功，写cookie和session

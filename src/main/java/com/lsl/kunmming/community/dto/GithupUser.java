@@ -4,6 +4,7 @@ public class GithupUser {
     private String name;
     private Long id;
     private String bio;
+    private String avatarUrl;
 
     public String getName() {
         return name;
@@ -21,6 +22,24 @@ public class GithupUser {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "GithupUser{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", bio='" + bio + '\'' +
+                ", avatar_url='" + avatarUrl + '\'' +
+                '}';
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
     public String getBio() {
         return bio;
     }
@@ -29,12 +48,4 @@ public class GithupUser {
         this.bio = bio;
     }
 
-    @Override
-    public String toString() {
-        return "GithupUser{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", bio='" + bio + '\'' +
-                '}';
-    }
 }
